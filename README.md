@@ -1,21 +1,29 @@
 # HTU 21
 How to read HTU 21 with python
 
-##Enable I2c for pi
+## Enable I2c for pi
 
-##Connect htu21
+## Connect htu21
 
 <img src="https://github.com/gejanssen/htu21_python/blob/master/htu21.png" align="right" />
 
 
 
-##Enable user-i2c
+
+## Enable I2C 
+```
+gej@rpi-b ~/htu21 $ sudo raspi-config nonint do_i2c 0
+```
+
+## Enable user-i2c
+
+En de rechten uitdelen
 
 ```
-sudo usermod -aG i2c yourusername
+gej@rpi-b ~/htu21 $ sudo usermod -aG i2c yourusername
 ```
 
-##Use :
+###Use :
 
 ```
 gej@rpi-b ~/htu21 $ python readhtu21.py 
